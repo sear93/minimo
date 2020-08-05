@@ -50,6 +50,7 @@ a {
 .header .container {
 	background: url(bg.png) no-repeat;
 	background-size: 100%;
+	min-height: 630px;
 }
 
 .logo {
@@ -68,14 +69,16 @@ a {
 nav ul {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 0;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
 }
 
 .menu li {
 	margin-left: 100px;
-}
-
-.menu {
-	margin-bottom: 590px;
 }
 
 li a {
@@ -87,6 +90,7 @@ li a {
 
 li a:hover {
 	color: #922626;
+	text-decoration: none;
 }
 
 /* Comment */
@@ -113,6 +117,7 @@ li a:hover {
 	margin-bottom: 30px;
 	height: 280px;
 	width: 100%;
+	object-fit: cover;
 }
 
 .blog__heading {
@@ -226,6 +231,14 @@ button i {
 	color: #626262;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
+	.menu {
+		display: none;
+	}
+}
 
+@media screen and (min-width: 768px) {
+	.menu li {
+    margin-left: 75px;
+	}
 }
